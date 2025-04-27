@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        gold: "#B8860B",       // Cor dourada para a logo e menu
+        goldLight: "#D4AF37",  // Variação mais clara para hover
+        goldDark: "#8B6914",   // Variação mais escura
       },
     },
   },
