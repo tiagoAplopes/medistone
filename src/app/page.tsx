@@ -41,14 +41,14 @@ export default function Home() {
           </div>
 
           <div className="flex gap-8">
-            <a href="#sobre" className="text-gold hover:text-goldLight transition-colors font-medium">
+            <a href="/" className="text-gold hover:text-goldLight transition-colors font-medium">
               Home
             </a>
-            <a href="#produtos" className="text-gold hover:text-goldLight transition-colors font-medium">
+            <a href="/products" className="text-gold hover:text-goldLight transition-colors font-medium">
               Products
             </a>
-            <a href="#contato" className="text-gold hover:text-goldLight transition-colors font-medium">
-              Contact
+            <a href="/contacts" className="text-gold hover:text-goldLight transition-colors font-medium">
+              Contacts
             </a>
           </div>
         </nav>
