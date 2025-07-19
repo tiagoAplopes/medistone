@@ -15,6 +15,17 @@ export default {
         goldLight: "#D4AF37",  // Variação mais clara para hover
         goldDark: "#8B6914",   // Variação mais escura
       },
+      fontFamily: {
+        raleway: ["var(--font-raleway)", "sans-serif"],
+        josefin: ["var(--font-josefin-sans)", "sans-serif"],
+      },
+      fontWeight: {
+        'josefin-light': '300',
+        'josefin-normal': '400',
+        'josefin-medium': '500',
+        'josefin-semibold': '600',
+        'josefin-bold': '700',
+      },
     },
   },
   plugins: [],

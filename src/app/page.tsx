@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Navigation from "@/components/Navigation";
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -24,37 +25,14 @@ export default function Home() {
   };
 
   return (
-    <>
-      <div className="relative min-h-screen">
+    <div className="w-full">
+      {/* Hero Section */}
+      <section className="relative section-fullscreen">
         {/* Navbar */}
-        <nav className="absolute top-0 left-0 w-full z-20 flex justify-between items-center px-8 py-6">
-          <div className="flex items-center">
-            <Image
-              src="/assets/LOGO-TRANSPARENT.png"
-              alt="MEDSTONE Logo"
-              width={320}
-              height={80}
-              quality={100}
-              priority
-              className="h-auto"
-            />
-          </div>
-
-          <div className="flex gap-8">
-            <a href="/" className="text-gold hover:text-goldLight transition-colors font-medium">
-              Home
-            </a>
-            <a href="/products" className="text-gold hover:text-goldLight transition-colors font-medium">
-              Products
-            </a>
-            <a href="/contacts" className="text-gold hover:text-goldLight transition-colors font-medium">
-              Contacts
-            </a>
-          </div>
-        </nav>
+        <Navigation showLogo={true} variant="default" />
 
         {/* Video background section */}
-        <div className="absolute inset-0 w-full h-screen">
+        <div className="absolute inset-0 w-full h-full">
           <video
             autoPlay
             muted
@@ -65,10 +43,10 @@ export default function Home() {
             <source src="/assets/home.mp4" type="video/mp4" />
           </video>
         </div>
-      </div>
+      </section>
 
       {/* Products Section */}
-      <section id="produtos" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="produtos" className="relative section-fullscreen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -84,7 +62,7 @@ export default function Home() {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-12 h-full py-8">
           {/* Product Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
@@ -100,12 +78,12 @@ export default function Home() {
 
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-white flex flex-col items-start">
-            <h2 className="text-3xl md:text-4xl font-light mb-4 leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-josefin font-light mb-4 leading-relaxed">
               Collect unique key pieces <br />
-              for unforgettable <span className="font-medium text-white">luxury stones</span>
+              for unforgettable <span className="font-josefin font-semibold text-white">luxury stones</span>
             </h2>
 
-            <button className="mt-8 bg-white text-zinc-900 px-8 py-3 rounded-full hover:bg-gray-200 transition-colors text-sm font-medium">
+            <button className="mt-8 bg-white text-zinc-900 px-8 py-3 rounded-full hover:bg-gray-200 transition-colors text-sm font-raleway font-medium">
               Discover all products
             </button>
           </div>
@@ -119,7 +97,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center">
             {/* Title Column */}
             <div className="md:w-1/3 flex items-center justify-start md:justify-center self-stretch mb-12 md:mb-0 pr-0 md:pr-12">
-              <h2 className="text-3xl md:text-4xl font-light leading-tight md:leading-tight pl-0 md:pl-8 lg:pl-16" style={{ color: 'rgb(234, 88, 12)' }}>
+              <h2 className="text-3xl md:text-4xl font-josefin font-semibold leading-tight md:leading-tight pl-0 md:pl-8 lg:pl-16" style={{ color: 'rgb(234, 88, 12)' }}>
                 The art of<br />
                 tailoring stones<br />
                 to match any<br />
@@ -225,17 +203,17 @@ export default function Home() {
         {/* Content Container */}
         <div className="relative z-10 max-w-4xl mx-auto px-8 py-16 md:py-20 bg-white bg-opacity-95 rounded-[2.5rem] shadow-md">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-light text-amber-600 mb-8">
-              Any stone type, <span className="font-medium">anywhere.</span>
+            <h2 className="text-3xl md:text-4xl font-josefin font-semibold text-amber-600 mb-8">
+              Any stone type, <span className="font-josefin font-bold">anywhere.</span>
             </h2>
-            <div className="max-w-3xl mx-auto text-gray-700 leading-relaxed text-sm md:text-base">
+            <div className="max-w-3xl mx-auto text-gray-700 leading-relaxed text-sm md:text-base font-raleway">
               <p className="mb-4">
                 Medistone is a stone provider in any type and kind from Travertine to onyx we provide our clients in any style and figure,
                 slabs, tiles and all other shapes based on what is demanded either from architect or retailer clients. The
                 widespread multinational blockchain that Medistone supplies its clients from
               </p>
               <p className="mb-4">
-                <span className="text-amber-700 font-medium">Europe, middle-east, Africa, China and almost all
+                <span className="text-amber-700 font-raleway font-medium">Europe, middle-east, Africa, China and almost all
                 over the world</span> is one of the most outstanding characteristics of Medistone that made us proud of working for last 25 years in
                 stone business based on Italy.
               </p>
@@ -264,10 +242,10 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
           {/* Section Header */}
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-light text-white mb-8 drop-shadow-md">
-              <span className="font-semibold" style={{ color: 'rgb(180, 83, 9)' }}>Manufactured</span> stone accessories
+            <h2 className="text-3xl md:text-5xl font-josefin font-light text-white mb-8 drop-shadow-md">
+              <span className="font-josefin font-bold" style={{ color: 'rgb(180, 83, 9)' }}>Manufactured</span> stone accessories
             </h2>
-            <p className="max-w-3xl mx-auto text-white leading-relaxed text-lg drop-shadow-sm">
+            <p className="max-w-3xl mx-auto text-white leading-relaxed text-lg drop-shadow-sm font-raleway">
               Custom-designed stone accessories crafted to your specifications. Our team works closely with you to create unique,
               high-quality stone products that perfectly match your vision and requirements.
             </p>
@@ -288,8 +266,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-xl font-bold text-amber-700 mb-4">Stone Products</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-josefin font-bold text-amber-700 mb-4">Stone Products</h3>
+                <p className="text-gray-600 leading-relaxed font-raleway">
                   We make a variety range of products, all stone based.
                 </p>
               </div>
@@ -308,8 +286,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-xl font-bold text-amber-700 mb-4">Client Services</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-josefin font-bold text-amber-700 mb-4">Client Services</h3>
+                <p className="text-gray-600 leading-relaxed font-raleway">
                   Visual order tracking for any step of preparation and shipping.
                 </p>
               </div>
@@ -328,8 +306,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-xl font-bold text-amber-700 mb-4">Open design studio</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-josefin font-bold text-amber-700 mb-4">Open design studio</h3>
+                <p className="text-gray-600 leading-relaxed font-raleway">
                   Open to collaborate with architects & designers for the best achievements.
                 </p>
               </div>
@@ -357,19 +335,19 @@ export default function Home() {
           </div>
 
           {/* Subtitle */}
-          <p className="text-[#d4a24b] text-xl md:text-2xl font-light mb-16 max-w-2xl mx-auto tracking-wide">
+          <p className="text-[#d4a24b] text-xl md:text-2xl font-josefin font-light mb-16 max-w-2xl mx-auto tracking-wide">
             We connected art, industry and nature through stones.
           </p>
 
           {/* Button */}
-          <button className="bg-[#d4a24b] text-black font-medium px-12 py-3 rounded-full shadow-lg hover:bg-[#c69544] hover:shadow-xl transition-all duration-300 mb-24 text-lg">
+          <button className="bg-[#d4a24b] text-black font-raleway font-medium px-12 py-3 rounded-full shadow-lg hover:bg-[#c69544] hover:shadow-xl transition-all duration-300 mb-24 text-lg">
             Let's get in touch
           </button>
 
           <div className="flex-1"></div> {/* Spacer for vertical centering */}
 
           {/* Footer */}
-          <p className="text-[#d4a24b] text-sm font-light tracking-wider">
+          <p className="text-[#d4a24b] text-sm font-raleway font-light tracking-wider">
             © 2025 by Medistones
           </p>
         </div>
@@ -383,6 +361,6 @@ export default function Home() {
           ↑
         </button>
       )}
-    </>
+    </div>
   );
 }

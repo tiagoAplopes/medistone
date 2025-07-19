@@ -95,7 +95,7 @@ export default function TravertineCarousel() {
 
 	return (
 		<div className="w-full py-16 px-2 md:px-8 bg-[#e7dccb]">
-			<h2 className="text-3xl md:text-5xl font-bold text-[#a88c5f] mb-10 text-center">
+			<h2 className="text-3xl md:text-5xl font-josefin font-bold text-[#a88c5f] mb-10 text-center">
 				Travertine
 			</h2>
 			<div className="relative max-w-7xl mx-auto">
@@ -148,7 +148,7 @@ export default function TravertineCarousel() {
 									sizes="(max-width: 768px) 90vw, (max-width: 1280px) 33vw, 20vw"
 									quality={100}
 								/>
-								<span className="absolute top-3 left-3 bg-[#e7dccb]/90 text-[#a88c5f] font-semibold text-lg md:text-xl px-4 py-2 rounded-2xl shadow-md">
+								<span className="absolute top-3 left-3 bg-[#e7dccb]/90 text-[#a88c5f] font-josefin font-semibold text-lg md:text-xl px-4 py-2 rounded-2xl shadow-md">
 									{item.name}
 								</span>
 							</div>
